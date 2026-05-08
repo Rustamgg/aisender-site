@@ -1,0 +1,77 @@
+---
+const cols = [
+  {
+    title: 'Платформа',
+    links: [
+      { label: 'Возможности', href: '#features' },
+      { label: 'Сравнение', href: '#comparison' },
+      { label: 'Кейсы', href: '#cases' },
+      { label: 'Тарифы', href: '#pricing' },
+    ],
+  },
+  {
+    title: 'Компания',
+    links: [
+      { label: 'О компании', href: '#' },
+      { label: 'Кейсы', href: '#cases' },
+      { label: 'FAQ', href: '#faq' },
+    ],
+  },
+  {
+    title: 'Контакты',
+    links: [
+      { label: '+7 (927) 484-68-80', href: 'tel:+79274846880' },
+      { label: 'aisender.ru@gmail.com', href: 'mailto:aisender.ru@gmail.com' },
+      { label: '@leonaisupport', href: 'https://t.me/leonaisupport' },
+      { label: 'г. Бугульма, Республика Татарстан', href: '#', muted: true },
+    ],
+  },
+];
+---
+<footer class="bg-bg-footer pt-12 sm:pt-14 pb-8">
+  <div class="container-tight">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+      <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+        <span class="text-xl font-bold text-gradient">AISender</span>
+        <p class="text-sm text-white/60 leading-relaxed">
+          AI-платформа для управления коммуникациями в Telegram
+        </p>
+      </div>
+      {cols.map((col) => (
+        <div class="flex flex-col gap-3">
+          <h4 class="text-sm font-bold text-white">{col.title}</h4>
+          <ul class="flex flex-col gap-2.5">
+            {col.links.map((l) => (
+              <li>
+                <a
+                  href={l.href}
+                  class:list={[
+                    'text-[13px] hover:text-white transition-colors',
+                    l.muted ? 'text-white/50' : 'text-white/70',
+                  ]}
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-white/5 flex flex-col gap-3 text-[12px] text-white/40 leading-relaxed">
+      <div>
+        © 2026 ООО «АИСЕНДЕР». Все права защищены.
+      </div>
+      <div>
+        ИНН 1644106424 · КПП 164401001 · ОГРН 1241600024269 · Дата регистрации 27.05.2024 · ОКВЭД 62.01 — Разработка ПО
+      </div>
+      <div>
+        Юридический адрес: 423237, Республика Татарстан, г. Бугульма, ул. Газинура Гафиатуллина, д. 44, кв. 75
+      </div>
+      <div>
+        Виды осуществляемой деятельности в области ИТ соответствуют перечню, утверждённому Приказом Минцифры России от 11.05.2023 № 449. Директор: Губайдуллин Рустам Равилевич.
+      </div>
+    </div>
+  </div>
+</footer>

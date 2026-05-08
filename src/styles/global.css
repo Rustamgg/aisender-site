@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-dark text-white font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer components {
+  .container-tight {
+    @apply max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-brand-gradient-h;
+  }
+  .glass {
+    @apply bg-white/[0.07] border border-white/10 backdrop-blur-md;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-gradient-h text-white font-bold px-6 py-3.5 text-base shadow-brand-glow hover:shadow-brand-glow-lg transition-shadow;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/30 text-white font-semibold px-6 py-3.5 text-base hover:bg-white/15 transition-colors;
+  }
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full bg-white/[0.07] border border-white/10 px-4 py-2 text-[13px] font-medium text-white;
+  }
+}

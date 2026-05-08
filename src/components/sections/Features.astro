@@ -1,0 +1,108 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const small = [
+  { icon: 'lucide:plug', title: 'Интеграция\nс CRM', desc: 'Bitrix24, AmoCRM, Custom API, webhooks' },
+  { icon: 'lucide:book-open', title: 'Промпт-инженерия\nпод бренд', desc: 'Настройка AI под голос бренда, продукт и сценарии' },
+  { icon: 'lucide:flask-conical', title: 'Эмуляция\nдиалогов', desc: 'Тестовая версия агента до запуска: проверяете тон и логику' },
+  { icon: 'lucide:bar-chart-2', title: 'Аналитика\nдиалогов', desc: 'Дашборд с метриками: объём, статусы, конверсия в передачу' },
+];
+---
+<section id="features" class="bg-bg-dark-2 py-16 sm:py-20 lg:py-24">
+  <div class="container-tight">
+    <h2 class="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">Возможности платформы</h2>
+
+    <div class="mt-10 sm:mt-14 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6">
+      <!-- Big card 1 — chat preview -->
+      <div class="rounded-3xl glass overflow-hidden flex flex-col">
+        <div class="p-7 lg:p-8 pb-5 flex flex-col gap-4">
+          <h3 class="text-2xl font-bold text-white">AI-диалог в Telegram</h3>
+          <p class="text-[15px] text-white/70 leading-relaxed max-w-md">
+            Мгновенная обработка сообщений, естественный язык, полный контекст диалога. Агент помнит историю переписки даже спустя месяцы.
+          </p>
+        </div>
+        <div class="px-7 lg:px-8 pb-7 lg:pb-8 mt-2 grow flex">
+          <div class="w-full max-w-[480px] mx-auto rounded-2xl bg-[#1A1A24] border border-white/5 p-5 flex flex-col gap-2.5">
+            <div class="flex items-center gap-2 pb-2.5 border-b border-white/5">
+              <span class="block w-7 h-7 rounded-full bg-brand-gradient"></span>
+              <div class="flex flex-col leading-tight">
+                <span class="text-[12px] font-bold text-white">AI-агент</span>
+                <span class="text-[10px] text-accent-green flex items-center gap-1">
+                  <span class="block w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse-dot"></span>
+                  печатает…
+                </span>
+              </div>
+            </div>
+            <div class="rounded-bl-2xl rounded-tr-2xl rounded-br-2xl bg-[#2A2A38] px-3.5 py-2 text-[13px] text-white max-w-[220px] self-start">
+              Здравствуйте! Чем помочь?
+            </div>
+            <div class="rounded-bl-2xl rounded-tl-2xl rounded-br-2xl bg-brand-orange px-3.5 py-2 text-[13px] text-white max-w-[180px] self-end">
+              Нужна консультация
+            </div>
+            <div class="rounded-bl-2xl rounded-tr-2xl rounded-br-2xl bg-[#2A2A38] px-3.5 py-2 text-[13px] text-white max-w-[260px] self-start">
+              Расскажите подробнее о задаче 🎯
+            </div>
+            <div class="rounded-bl-2xl rounded-tl-2xl rounded-br-2xl bg-brand-orange px-3.5 py-2 text-[13px] text-white max-w-[260px] self-end">
+              Ищу решение для входящих заявок
+            </div>
+            <div class="self-start inline-flex items-center gap-1.5 rounded-full bg-[#2A2A38] px-3 py-2">
+              <span class="block w-1.5 h-1.5 rounded-full bg-white/50 animate-pulse-dot"></span>
+              <span class="block w-1.5 h-1.5 rounded-full bg-white/50 animate-pulse-dot"></span>
+              <span class="block w-1.5 h-1.5 rounded-full bg-white/50 animate-pulse-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Big card 2 — qualification preview -->
+      <div class="rounded-3xl glass overflow-hidden flex flex-col">
+        <div class="p-7 lg:p-8 pb-5 flex flex-col gap-4">
+          <h3 class="text-2xl font-bold text-white">Автоматическая квалификация</h3>
+          <p class="text-[15px] text-white/70 leading-relaxed max-w-md">
+            Платформа определяет статус контакта на основании сценария и истории диалога. В CRM попадают только готовые к работе лиды.
+          </p>
+        </div>
+        <div class="px-7 lg:px-8 pb-7 lg:pb-8 mt-2 grow flex">
+          <div class="w-full max-w-[480px] mx-auto rounded-2xl bg-[#1A1A24] border border-white/5 p-5 flex flex-col gap-3">
+            <span class="text-[11px] uppercase tracking-widest text-white/45">Статус контакта</span>
+            <div class="flex items-center justify-between gap-3 rounded-xl bg-accent-green/15 border border-accent-green/40 px-4 py-3">
+              <div class="flex items-center gap-3">
+                <span class="block w-2.5 h-2.5 rounded-full bg-accent-green"></span>
+                <span class="text-sm font-semibold text-white">Горячий</span>
+              </div>
+              <span class="text-[12px] text-white/70">готов к покупке</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 rounded-xl bg-brand-orange-light/15 border border-brand-orange-light/40 px-4 py-3">
+              <div class="flex items-center gap-3">
+                <span class="block w-2.5 h-2.5 rounded-full bg-brand-orange-light"></span>
+                <span class="text-sm font-semibold text-white">Тёплый</span>
+              </div>
+              <span class="text-[12px] text-white/70">нужен прогрев</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 rounded-xl bg-white/[0.06] border border-white/15 px-4 py-3">
+              <div class="flex items-center gap-3">
+                <span class="block w-2.5 h-2.5 rounded-full bg-white/60"></span>
+                <span class="text-sm font-semibold text-white">Холодный</span>
+              </div>
+              <span class="text-[12px] text-white/70">в воронку</span>
+            </div>
+            <div class="mt-1 flex items-center justify-between rounded-xl bg-white/[0.04] border border-white/10 px-4 py-3">
+              <span class="text-[12px] text-white/65">Передано в CRM сегодня</span>
+              <span class="text-base font-extrabold text-gradient">128</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 lg:mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+      {small.map((s) => (
+        <div class="rounded-2xl glass p-7 flex flex-col gap-3.5">
+          <Icon name={s.icon} class="w-7 h-7 text-brand-orange" />
+          <h3 class="text-lg font-bold text-white whitespace-pre-line leading-tight">{s.title}</h3>
+          <p class="text-[13px] text-white/65 leading-relaxed">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

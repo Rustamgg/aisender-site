@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const items = [
+  { icon: 'lucide:building-2', title: 'Недвижимость и застройщики', desc: 'Обработка обращений по объектам, квалификация по бюджету и параметрам, передача в отдел продаж' },
+  { icon: 'lucide:graduation-cap', title: 'Образование и EdTech', desc: 'Консультации по программам, регистрация на интенсивы и вебинары, ответы на вопросы абитуриентов' },
+  { icon: 'lucide:briefcase', title: 'B2B-услуги', desc: 'Предварительная квалификация контактов, ответы на типовые вопросы, запись на встречу с менеджером' },
+  { icon: 'lucide:landmark', title: 'Финансовые услуги', desc: 'Первичная консультация по продуктам, маршрутизация обращений к профильному менеджеру' },
+  { icon: 'lucide:megaphone', title: 'Маркетинговые агентства', desc: 'Масштабирование клиентских коммуникаций, единый контур для нескольких брендов в одной платформе' },
+  { icon: 'lucide:users', title: 'Консалтинг', desc: 'Первая линия общения с клиентом, отбор релевантных запросов, подготовка контекста к встрече' },
+];
+---
+<section class="bg-bg-light py-16 sm:py-20 lg:py-24">
+  <div class="container-tight">
+    <div class="text-center mb-10 sm:mb-14">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">Кому подходит платформа</h2>
+      <p class="mt-4 text-base sm:text-lg text-muted-dark max-w-2xl mx-auto leading-relaxed">
+        AISender используют компании, для которых коммуникации в мессенджерах — основной канал работы с клиентами
+      </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+      {items.map((it) => (
+        <div class="rounded-2xl bg-white border border-[#E5E5EA] p-6 lg:p-7 shadow-sm hover:shadow-md transition-shadow">
+          <Icon name={it.icon} class="w-7 h-7 text-brand-orange" />
+          <h3 class="mt-4 text-lg font-bold text-ink">{it.title}</h3>
+          <p class="mt-2 text-sm text-muted-dark leading-relaxed">{it.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+---
+const faqs = [
+  {
+    q: 'Сколько времени занимает запуск платформы?',
+    a: 'До 5 рабочих дней — от заполнения брифа до старта первых диалогов. Включает настройку AI-агента, интеграцию с CRM и эмуляцию.',
+  },
+  {
+    q: 'Какие CRM поддерживаются?',
+    a: 'Bitrix24 и AmoCRM — нативно через API. Для других систем — Custom API и webhooks. Если у вас собственная CRM, мы подготовим интеграцию по согласованному техническому заданию.',
+  },
+  {
+    q: 'Где находится инфраструктура AISender?',
+    a: 'Все серверы и LLM-инфраструктура размещены на территории Российской Федерации. Внешним облачным сервисам данные не передаются.',
+  },
+  {
+    q: 'Можно ли протестировать платформу до оплаты?',
+    a: 'Да. Перед запуском мы проводим эмуляцию диалогов — тестовую среду, в которой вы видите, как агент будет вести себя в реальной работе. Эмуляция входит в стандартный процесс настройки.',
+  },
+  {
+    q: 'Можно ли обучить AI-агента на наших материалах?',
+    a: 'Да. Через бриф и систему промптов вы передаёте знания о продукте, тональности, типовых сценариях и FAQ. AI-агент работает строго в рамках вашей предметной области.',
+  },
+  {
+    q: 'Что считается контактом в тарифе?',
+    a: 'Контакт — это один инициированный диалог с потенциальным клиентом. Всё, что происходит после: ответы AI, уточняющие вопросы, квалификация, прогрев и передача данных в CRM — уже включено в стоимость тарифа. Платите вы только за вход в воронку.',
+  },
+  {
+    q: 'Сколько стоит подключение?',
+    a: 'Подключение и настройка входят в первый платёж по выбранному тарифу. Дополнительной платы за интеграцию с CRM и обучение агента нет.',
+  },
+];
+---
+<section id="faq" class="bg-bg-light py-16 sm:py-20 lg:py-24">
+  <div class="container-tight">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">Частые вопросы</h2>
+      <p class="mt-4 text-base sm:text-lg text-muted-dark leading-relaxed">
+        Кратко о том, как платформа подключается, что входит в тариф и как устроена работа AI-агента.
+      </p>
+    </div>
+
+    <div class="mt-10 sm:mt-14 grid grid-cols-1 lg:grid-cols-2 gap-x-10 lg:gap-x-16 gap-y-1">
+      {faqs.map((f) => (
+        <details class="group border-b border-[#E0E0E5] py-1">
+          <summary class="flex cursor-pointer items-center justify-between py-5 list-none">
+            <span class="text-base sm:text-lg font-semibold text-ink pr-6">{f.q}</span>
+            <span class="text-2xl text-muted-dark font-light transition-transform group-open:rotate-45 select-none shrink-0">+</span>
+          </summary>
+          <p class="pb-5 text-[15px] text-muted-dark leading-relaxed">{f.a}</p>
+        </details>
+      ))}
+    </div>
+
+    <p class="mt-12 text-center">
+      <a href="https://t.me/leonaisupport" class="text-base font-semibold text-brand-orange hover:text-brand-orange-light transition-colors">
+        Не нашли ответ? Напишите в Telegram →
+      </a>
+    </p>
+  </div>
+</section>
