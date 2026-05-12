@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const services = [
+  'Разработка и предоставление доступа к собственному ПО AISender — AI-платформе для коммуникаций в Telegram',
+  'Настройка AI-агента под бизнес заказчика: сценарии, тональность, эмуляция диалогов до запуска',
+  'Интеграция с CRM-системами (Bitrix24, AmoCRM, REST API, webhooks)',
+  'Техническое сопровождение и развитие платформы для действующих заказчиков',
+  'Консультирование и обучение сотрудников заказчика',
+];
+
+const tech = [
+  'TypeScript', 'JavaScript', 'Python', 'Node.js',
+  'Astro', 'React', 'Tailwind CSS',
+  'PostgreSQL', 'Redis',
+  'Telegram Bot API', 'MTProto',
+  'Docker', 'Linux', 'Nginx',
+];
+---
+<section id="about" class="bg-bg-light py-16 sm:py-20 lg:py-24">
+  <div class="container-tight">
+    <div class="text-center mb-10 sm:mb-12">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">О компании</h2>
+      <p class="mt-4 text-base sm:text-lg text-muted-dark max-w-2xl mx-auto leading-relaxed">
+        ООО «АИСЕНДЕР» — российский разработчик и оператор AI-платформы AISender для автоматизации деловых коммуникаций в Telegram.
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto rounded-2xl bg-white border border-[#E5E5EA] p-7 lg:p-9 shadow-sm">
+      <h3 class="text-lg font-bold text-ink">Чем мы занимаемся</h3>
+      <ul class="mt-4 flex flex-col gap-2.5">
+        {services.map((s) => (
+          <li class="flex gap-2.5 text-sm text-muted-dark leading-relaxed">
+            <Icon name="lucide:check" class="w-4 h-4 mt-0.5 text-brand-orange shrink-0" />
+            <span>{s}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-6 pt-5 border-t border-[#EFEFF2]">
+        <span class="text-[11px] uppercase tracking-widest text-muted-dark font-semibold">Технологический стек</span>
+        <ul class="mt-3 flex flex-wrap gap-1.5">
+          {tech.map((t) => (
+            <li class="rounded-md bg-[#F5F5F7] border border-[#E5E5EA] px-2 py-0.5 text-[11.5px] text-ink/80">
+              {t}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
